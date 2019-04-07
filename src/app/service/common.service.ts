@@ -10,12 +10,33 @@ export class CommonService {
 
   constructor(private http: HttpClient) { }
 
-  public memberData:Member[];
-
-  public httpGetMember():any{
-    const memberUrl = "../assets/json/member.json";
-    return this.http.get(memberUrl);
-  }
+  public memberData:Member[] = [
+    {
+        Id:0,
+        Name:"たいが",
+        Attendance:true
+    },{
+        Id:1,
+        Name:"ふさ",
+        Attendance:true
+    },{
+        Id:2,
+        Name:"ザン",
+        Attendance:true
+    },{
+        Id:3,
+        Name:"Dynamis",
+        Attendance:true
+    },{
+        Id:4,
+        Name:"Xiaoqing",
+        Attendance:true
+    },{
+        Id:5,
+        Name:"Loh",
+        Attendance:true
+    }
+];
 
   public setMemberData(memberData:Member[]):void{
     this.memberData = memberData;

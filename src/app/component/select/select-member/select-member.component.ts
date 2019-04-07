@@ -8,36 +8,25 @@ import { Member } from '../../../type/type';
 })
 export class SelectMemberComponent implements OnInit {
 
-  constructor(private service : CommonService) { }
+  constructor(private service: CommonService) { }
 
-  public memberData:Member[];
+  public memberData: Member[];
 
   ngOnInit() {
-    const hasMemberData:boolean = this.service.hasMemberData();
-    if(hasMemberData === false) {
-      this.service.httpGetMember().subscribe((data: Member[]) => {
-        this.service.setMemberData(data);
-        this.memberData = this.service.getMemberData();
-      });
-    }else{
-      this.memberData = this.service.getMemberData();
-    }
+    const hasMemberData: boolean = this.service.hasMemberData();
+    this.memberData = this.service.getMemberData();
   }
 
-  public chengeState(i:number):void{
+  public chengeState(i: number): void {
     let state = this.memberData[i].Attendance;
     if (state === true) {
       this.memberData[i].Attendance = false;
-    }else{
+    } else {
       this.memberData[i].Attendance = true;
     }
   }
 
-  public mergeMemberData():void{
+  public mergeMemberData(): void {
     this.service.setMemberData(this.memberData);
   }
-
-
-
-
 }
