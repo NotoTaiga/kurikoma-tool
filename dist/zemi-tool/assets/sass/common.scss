@@ -1,0 +1,41 @@
+$backColor : #FFEED5;
+$black:#454545;
+$white:#fefefe;
+$darkBule:#79A1D4;
+$bule : #9FBCDF;
+$skyBule:#ABCAE8;
+
+html{
+    font-size: 62.5%;
+}
+
+@mixin btn($width,$height) {
+    width: $width;
+    height: $height;
+    background-color: $white;
+    color: $darkBule;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+@mixin btn_select($width,$height) {
+    width: $width;
+    height: $height;
+    background-color: $backColor;
+    color: $darkBule;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+@mixin btn_Bule($width,$height) {
+    width: $width;
+    height: $height;
+    background-color: $darkBule;
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
