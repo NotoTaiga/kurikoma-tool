@@ -15,6 +15,8 @@ export class SelectMemberComponent implements OnInit {
   ngOnInit() {
     const hasMemberData: boolean = this.service.hasMemberData();
     this.memberData = this.service.getMemberData();
+    console.log(this.memberData);
+    
   }
 
   public chengeState(i: number): void {
