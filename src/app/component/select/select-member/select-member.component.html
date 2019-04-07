@@ -1,0 +1,9 @@
+<div class="member">
+  <ul class="member_list">
+    <li class="member_item memberCont" *ngFor="let member of memberData;let i = index">
+      <div class="memberCont_name">{{member.Name}}</div>
+      <button class="memberCont_btn" [class.select]="member.Attendance === true" (click)="chengeState(i)">出席</button>
+      <button class="memberCont_btn" [class.select]="member.Attendance === false" (click)="chengeState(i)">欠席</button>
+    </li>
+  </ul>
+</div>

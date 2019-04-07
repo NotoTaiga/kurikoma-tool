@@ -1,0 +1,36 @@
+@import "../../../assets/sass/common.scss";
+
+.select {
+  .header {
+      width: 100vw;
+      height: 6rem;
+      background-color: $darkBule;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    &_title {
+        font-weight: bold;
+        color: $white;
+        font-size: 2.5rem;
+    }
+  }
+
+  .main{
+      box-sizing: border-box;
+      width: 100vw;
+      padding: 0 1.6rem;
+
+      .btnCont{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          &_btn{
+              @include btn_Bule(15rem,5rem);
+              margin:0 1.6rem;
+              &:hover{
+                background-color: $skyBule;
+            }
+          }
+      }
+  }
+}

@@ -1,0 +1,107 @@
+@import "../../../assets/sass/common.scss";
+
+.show {
+  .header {
+    width: 100vw;
+    height: 6rem;
+    background-color: $darkBule;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_title {
+      font-weight: bold;
+      color: $white;
+      font-size: 2.5rem;
+    }
+
+    .back{
+        background-color: $darkBule;
+        position: absolute;
+        top: 0;
+        left: 1.6rem;
+        width: 4rem;
+        height: 6rem;
+        background-image: url('../../../assets/img/back.png');
+        background-repeat: no-repeat;
+        background-size: 2.5rem;
+        background-position: center;
+    }
+  }
+
+  .main {
+    box-sizing: border-box;
+    width: 100vw;
+    .onlyShuffle {
+      width: 80vw;
+      height: auto;
+      margin: 5rem auto;
+      border-radius: 0.8rem;
+      background-color: $darkBule;
+      padding-bottom: 3rem;
+      text-align: center;
+
+      .member {
+        margin: auto;
+        font-size: 3rem;
+        color: $white;
+        width: 35rem;
+        height: 4rem;
+        padding-top: 4rem;
+        border-bottom: 2px solid $white;
+        display: flex;
+        justify-content: center;
+
+        .number {
+          width: 5rem;
+          text-align: center;
+        }
+        .name {
+          width: 20rem;
+        }
+      }
+    }
+
+    .twoTeam {
+      width: 80vw;
+      height: auto;
+      margin: 5rem auto;
+
+      .flexBox {
+        display: flex;
+        justify-content: center;
+
+        .team {
+          width: 40rem;
+          height: auto;
+          background-color: $darkBule;
+          border-radius: 0.8rem;
+          margin:0 5rem;
+          padding-bottom: 4rem;
+          &-small{
+              width: 30rem;
+          }
+
+          &_member {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin: 0 auto;
+            font-size: 2rem;
+            width: 20rem;
+            height: 4rem;
+            padding-top: 4rem;
+            border-bottom: 0.2rem solid $white;
+
+            &-pick{
+                color: aqua;
+            }
+
+            &-small{
+                width: 15rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

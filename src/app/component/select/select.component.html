@@ -1,0 +1,16 @@
+<div class="select">
+  <header class="header">
+    <h1 class="header_title">
+      {{title}}
+    </h1>
+  </header>
+
+  <main class="main">
+      <app-select-member></app-select-member>
+      <div class="btnCont">
+        <button class="btnCont_btn" (click)="toolSelect(0)" routerLink="/ShowComponent">発表順</button>
+        <button class="btnCont_btn" (click)="toolSelect(1)" routerLink="/ShowComponent">2グループ</button>
+        <button class="btnCont_btn" (click)="toolSelect(2)" routerLink="/ShowComponent">ペアワーク</button>
+      </div>
+  </main>
+</div>

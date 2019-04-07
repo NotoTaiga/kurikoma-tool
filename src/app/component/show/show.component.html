@@ -1,0 +1,38 @@
+<div class="show">
+
+  <header class="header">
+    <h1 class="header_title">
+      {{title}}
+    </h1>
+    <button class="back"  routerLink="/SelectComponent"></button>
+  </header>
+
+  <main class="main">
+    <div class="onlyShuffle" *ngIf="toolState === 0">
+      <ul>
+        <li class="member" *ngFor="let member of randomMemberData; let i=index">
+          <div class="number">
+            {{i + 1}}.
+          </div>
+          <div class="name">
+            {{member.Name}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="twoTeam" *ngIf="toolState === 1 || toolState === 2">
+      <div class="flexBox">
+        <ul class="team" *ngFor="let team of randomTeam; let index = index;" [class.team-small]="toolState === 2">
+          <li class="team_member" *ngFor="let member of team; let i = index" [class.team_member-small]="toolState === 2" [class.team_member-pick]="PickMemberIndex[index] === i">
+            {{member.Name}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="timer">
+          <app-show-timer></app-show-timer>
+      </div>
+    </div>
+
+  </main>
+</div>

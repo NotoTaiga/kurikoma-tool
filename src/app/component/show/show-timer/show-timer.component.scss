@@ -1,0 +1,59 @@
+@import "../../../../assets/sass/common.scss";
+
+.timer{
+    margin: 5rem auto 0;
+    margin-top: 5rem;
+    border-radius: 0.8rem;
+    width: 50vw;
+    height: auto;
+    background-color: $white;
+    border: 2px solid $darkBule;
+    padding: 1.6rem;
+    .inputBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_text{
+            width: 50%;
+            font-size: 2rem;
+        }
+        &_flexBox{
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            .input{
+                width: 70%;
+                height: 3.5rem;
+            }
+            .text{
+                width: 10%;
+                font-size: 1.6rem;
+                text-align: center;
+            }
+            .btn{
+                @include btn(20%, 3.5rem);
+                background-color: $darkBule;
+                color: $white;
+            }
+        }
+    }
+
+    .timerBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .time{
+            font-size: 7rem;
+            color: $black;
+            text-align: center;
+            width: 100%;
+            margin:0 auto;
+        }
+        .cancel{
+            @include btn(8rem,3.5rem);
+            background-color: $darkBule;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<div class="timer">
+  <div class="inputBox" *ngIf="inputMode">
+    <p class="inputBox_text">討論時間を決めてください</p>
+    <div class="inputBox_flexBox">
+      <input type="number" class="input" name="inputNumber" [(ngModel)]="inputNumber" >
+      <p class="text">
+        分
+      </p>
+      <button class="btn" (click)="timerStart()">開始</button>
+    </div>
+  </div>
+
+  <div class="timerBox" *ngIf="showMode">
+    <p class="time">{{timeText}}</p>
+    <button class="cancel" (click)="cancelTimer()">中止</button>
+  </div>
+</div>
