@@ -1,4 +1,8 @@
 <div class="member">
+  <div class="selectBox">
+    <button (click)="selectZemiMember(0)">12期ゼミ</button>
+    <button (click)="selectZemiMember(1)">13期ゼミ</button>
+  </div>
   <ul class="member_list">
     <li class="member_item memberCont" *ngFor="let member of memberData;let i = index">
       <div class="memberCont_name">{{member.Name}}</div>

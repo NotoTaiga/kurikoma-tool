@@ -13,16 +13,16 @@ import { Member } from '../../type/type';
 export class SelectComponent implements OnInit {
 
   @ViewChild(SelectMemberComponent)
-  public selectMemberComponent:SelectMemberComponent;
+  public selectMemberComponent: SelectMemberComponent;
 
-  constructor(private service : CommonService) { }
-  public title:string = "クリコマtool";
+  constructor(private service: CommonService) { }
+  public title = 'クリコマtool';
 
   ngOnInit() {
-    
+
   }
 
-  public toolSelect(state:number):void{
+  public toolSelect(state: number): void {
     this.service.setToolState(state);
     this.selectMemberComponent.mergeMemberData();
   }

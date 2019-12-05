@@ -16,16 +16,20 @@ export class SelectMemberComponent implements OnInit {
     const hasMemberData: boolean = this.service.hasMemberData();
     this.memberData = this.service.getMemberData();
     console.log(this.memberData);
-    
   }
 
   public chengeState(i: number): void {
-    let state = this.memberData[i].Attendance;
+    const state = this.memberData[i].Attendance;
     if (state === true) {
       this.memberData[i].Attendance = false;
     } else {
       this.memberData[i].Attendance = true;
     }
+  }
+
+  public selectZemiMember(i: number) {
+    this.service.selectZemiMember(i);
+    this.memberData = this.service.getMemberData();
   }
 
   public mergeMemberData(): void {
